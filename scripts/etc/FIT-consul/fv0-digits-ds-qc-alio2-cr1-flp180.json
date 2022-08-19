@@ -72,8 +72,8 @@
           }
         ],
         "checkParameters": {
-          "thresholdWarning": "0.9",
-          "thresholdError": "0.8"
+          "thresholdWarning": "0.8",
+          "thresholdError": "0.6"
         }
       }
     }

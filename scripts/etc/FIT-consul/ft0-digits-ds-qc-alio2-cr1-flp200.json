@@ -68,7 +68,7 @@
           "MOs": ["CFD_efficiency"]
         }],
         "checkParameters": {
-          "thresholdWarning": "0.99",
+          "thresholdWarning": "0.9",
           "thresholdError": "0.8"
         }
       }
