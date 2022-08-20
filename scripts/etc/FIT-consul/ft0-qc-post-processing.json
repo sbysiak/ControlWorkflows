@@ -48,10 +48,10 @@
           "cycleDurationMoName":"CycleDurationNTF"
         },
         "initTrigger": [
-          "newobject:qcdb:FT0/MO/DigitQcTask/CycleDurationNTF"
+          "newobject:qcdb:FT0/MO/DigitQcTask/TriggersCorrelation"
         ],
         "updateTrigger": [
-          "newobject:qcdb:FT0/MO/DigitQcTask/CycleDurationNTF"
+          "newobject:qcdb:FT0/MO/DigitQcTask/TriggersCorrelation"
         ],
         "stopTrigger": [
           "userorcontrol"
@@ -175,10 +175,10 @@
 
         ],
         "initTrigger": [
-          "newobject:qcdb:FT0/MO/DigitQcTask/CycleDurationNTF"
+          "newobject:qcdb:FT0/MO/DigitQcTask/TriggersCorrelation"
         ],
         "updateTrigger": [
-          "newobject:qcdb:FT0/MO/DigitQcTask/CycleDurationNTF"
+          "newobject:qcdb:FT0/MO/DigitQcTask/TriggersCorrelation"
         ],
         "stopTrigger": [
           "userorcontrol"
