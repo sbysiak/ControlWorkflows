@@ -32,7 +32,7 @@
           "MOs": ["OutOfBunchColl_BCvsTrg"]
         }],
         "checkParameters": {
-          "thresholdWarning": "8e-4",
+          "thresholdWarning": "9e-4",
           "thresholdError": "15e-4"
         }
       }
