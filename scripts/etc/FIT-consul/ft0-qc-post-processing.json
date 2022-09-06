@@ -28,7 +28,7 @@
         "detectorName": "FT0",
         "dataSource": [{
           "type": "PostProcessing",
-          "name": "OutOfBunchCollTask",
+          "name": "PostProcTask",
           "MOs": ["OutOfBunchColl_BCvsTrg"]
         }],
         "checkParameters": {
@@ -40,7 +40,7 @@
     "postprocessing": {
      "PostProcTask": {
         "active": "true",
-        "className": "o2::quality_control_modules::ft0::BasicPPTask",
+        "className": "o2::quality_control_modules::ft0::PostProcTask",
         "moduleName": "QcFT0",
         "detectorName": "FT0",
         "custom":{
@@ -57,21 +57,6 @@
           "userorcontrol"
         ]
       },
-      "OutOfBunchCollTask": {
-         "active": "true",
-         "className": "o2::quality_control_modules::ft0::OutOfBunchCollTask",
-         "moduleName": "QcFT0",
-         "detectorName": "FT0",
-         "initTrigger": [
-           "newobject:qcdb:FT0/MO/DigitQcTask/BCvsTriggers"
-         ],
-         "updateTrigger": [
-           "newobject:qcdb:FT0/MO/DigitQcTask/BCvsTriggers"
-         ],
-         "stopTrigger": [
-           "userorcontrol"
-         ]
-       },
       "TrendingTask": {
         "active": "true",
         "className": "o2::quality_control::postprocessing::TrendingTask",

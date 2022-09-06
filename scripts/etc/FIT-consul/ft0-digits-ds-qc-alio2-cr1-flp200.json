@@ -33,26 +33,10 @@
         },
         "taskParameters": {
           "ChannelIDs": "0,1,2,3,4,5,6,7,8,9,10,11",
-          "binning_timeSumVsDiff": "2000, -52.08, 52.08, 2000, -52.08, 52.08"
-        }
-      },
-      "TriggerQcTask": {
-        "active": "true",
-        "className": "o2::quality_control_modules::ft0::TriggerQcTask",
-        "moduleName": "QcFT0",
-        "detectorName": "FT0",
-        "cycleDurationSeconds": "60",
-        "maxNumberCycles": "-1",
-        "resetAfterCycles": "1",
-        "dataSource": {
-          "type": "dataSamplingPolicy",
-          "name": "ft0-digits"
-        },
-        "taskParameters": {
-          "thresholdTimeLow": "-192",
-          "thresholdTimeHigh": "192",
-          "modeSide": "A+C",
-          "modeThresholdVar": "Ampl"
+          "trgThresholdTimeLow": "-192",
+          "trgThresholdTimeHigh": "192",
+          "trgModeSide": "A+C",
+          "trgModeThresholdVar": "Ampl"
         }
       }
     },

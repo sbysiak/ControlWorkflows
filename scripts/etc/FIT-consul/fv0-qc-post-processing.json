@@ -7,7 +7,7 @@
         "username": "not_applicable",
         "password": "not_applicable",
         "name": "not_applicable"
-      },      
+      },
       "monitoring": {
         "url": "infologger:///debug?qc"
       },
@@ -29,7 +29,7 @@
         "dataSource": [
           {
             "type": "PostProcessing",
-            "name": "OutOfBunchCollTask",
+            "name": "PostProcTask",
             "MOs": [
               "OutOfBunchColl_BCvsTrg"
             ]
@@ -44,7 +44,7 @@
     "postprocessing": {
       "PostProcTask": {
         "active": "true",
-        "className": "o2::quality_control_modules::fv0::BasicPPTask",
+        "className": "o2::quality_control_modules::fv0::PostProcTask",
         "moduleName": "QcFV0",
         "detectorName": "FV0",
         "custom": {
@@ -56,21 +56,6 @@
         ],
         "updateTrigger": [
           "newobject:qcdb:FV0/MO/DigitQcTask/TriggersCorrelation"
-        ],
-        "stopTrigger": [
-          "userorcontrol"
-        ]
-      },
-      "OutOfBunchCollTask": {
-        "active": "true",
-        "className": "o2::quality_control_modules::fv0::OutOfBunchCollTask",
-        "moduleName": "QcFV0",
-        "detectorName": "FV0",
-        "initTrigger": [
-          "newobject:qcdb:FV0/MO/DigitQcTask/BCvsTriggers"
-        ],
-        "updateTrigger": [
-          "newobject:qcdb:FV0/MO/DigitQcTask/BCvsTriggers"
         ],
         "stopTrigger": [
           "userorcontrol"

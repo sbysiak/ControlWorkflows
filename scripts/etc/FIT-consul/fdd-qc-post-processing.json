@@ -18,7 +18,44 @@
         "url": "o2-ccdb.internal",
         "host": "o2-ccdb.internal"      }
     },
+    "checks": {
+      "OutOfBunchCollCheck": {
+        "active": "true",
+        "className": "o2::quality_control_modules::fdd::OutOfBunchCollCheck",
+        "moduleName": "QcFDD",
+        "policy": "OnAny",
+        "detectorName": "FDD",
+        "dataSource": [{
+          "type": "PostProcessing",
+          "name": "PostProcTask",
+          "MOs": ["OutOfBunchColl_BCvsTrg"]
+        }],
+        "checkParameters": {
+          "thresholdWarning": "9e-4",
+          "thresholdError": "15e-4"
+        }
+      }
+    },
     "postprocessing": {
+      "PostProcTask": {
+         "active": "true",
+         "className": "o2::quality_control_modules::fdd::PostProcTask",
+         "moduleName": "QcFDD",
+         "detectorName": "FDD",
+         "custom":{
+           "numOrbitsInTF": "128",
+           "cycleDurationMoName":"CycleDurationNTF"
+         },
+         "initTrigger": [
+           "newobject:qcdb:FDD/MO/DigitQcTask/TriggersCorrelation"
+         ],
+         "updateTrigger": [
+           "newobject:qcdb:FDD/MO/DigitQcTask/TriggersCorrelation"
+         ],
+         "stopTrigger": [
+           "userorcontrol"
+         ]
+       },
       "TrendingTask": {
         "active": "true",
         "className": "o2::quality_control::postprocessing::TrendingTask",
@@ -99,10 +136,10 @@
           }
         ],
         "initTrigger": [
-          "newobject:qcdb:FDD/MO/DigitQcTask/Amp_channel0"
+          "newobject:qcdb:FDD/MO/DigitQcTask/TriggersCorrelation"
         ],
         "updateTrigger": [
-          "newobject:qcdb:FDD/MO/DigitQcTask/Amp_channel0"
+          "newobject:qcdb:FDD/MO/DigitQcTask/TriggersCorrelation"
         ],
         "stopTrigger": [
           "userorcontrol"
